@@ -8,17 +8,17 @@ const schema = new dynamoose.Schema({
 const peopleModel = dynamoose.model('PEOPLE', schema);
 
 exports.handler = async(event) => {
-  let parsedBody = JSON.parse(event.body);
-  console.log(parsedBody);
-  
-  const response = {statusCode: null, body: null};
+  let id = event?.pathParameters?.id
 
+  const response = {statusCode: null}
   try{
-    let newPeople = await peopleModel.create(parsedBody);
-    response.body = JSON.stringify(newPeople);
+
+    await peopleModel.delete(id);
+
     response.statusCode = 200;
+
   }catch(e){
-    response.body = JSON.stringify(e.message);
+    console.log(e.message)
     response.statusCode = 500;
   }
 

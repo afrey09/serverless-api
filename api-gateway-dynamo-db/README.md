@@ -46,3 +46,8 @@ Write lambda functions that will separately perform the proper CRUD operation on
 Create your routes using API Gateway.
 Routes should integrate with the appropriate Lambda function to perform the operation.
 
+## Collaborators
+
+Joe Davitt
+Jordan Covington
+

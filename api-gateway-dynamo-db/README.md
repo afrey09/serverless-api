@@ -36,7 +36,7 @@ CRUD Operation Handlers: Lambda Functions
 node index.js
 
 ### UML
-![Lab 18 UML](./assets/lab18UML.png)
+![Lab 18 UML](../assets/lab18UML.png)
 
 ### Documentation
 
